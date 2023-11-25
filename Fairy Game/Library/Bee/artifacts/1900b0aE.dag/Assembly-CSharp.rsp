@@ -377,6 +377,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/ShrinkTrigger.cs"
 "Assets/SupanthaPaul/2D Platformer Controller/Scripts/Camera/CameraFollow.cs"
 "Assets/SupanthaPaul/2D Platformer Controller/Scripts/Input/InputSystem.cs"
 "Assets/SupanthaPaul/2D Platformer Controller/Scripts/ObjectPooling/PoolManager.cs"
@@ -386,6 +387,8 @@
 "Assets/SupanthaPaul/2D Platformer Controller/Scripts/Player/PlayerController.cs"
 "Assets/_Scripts/Concept.cs"
 "Assets/_Scripts/Concept_ChildLaughter.cs"
+"Assets/_Scripts/DashThroughWall.cs"
+"Assets/_Scripts/ElevatorMover.cs"
 "Assets/_Scripts/InventoryManager.cs"
 -langversion:9.0
 

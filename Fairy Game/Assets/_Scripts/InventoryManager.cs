@@ -18,7 +18,7 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         
-        slot1text = GameObject.Find("Slot1Text").GetComponent<TMP_Text>();
+        //slot1text = GameObject.Find("Slot1Text").GetComponent<TMP_Text>();
         
     }
     void Update()
@@ -31,7 +31,7 @@ public class InventoryManager : MonoBehaviour
         }
 
 
-        slot1text.text = concepts[0].ToString();
+        //slot1text.text = concepts[0].ToString();
 
     }   
 
