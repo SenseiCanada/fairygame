@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : Observer
 {
     [SerializeField] public List<GameObject> concepts = new List<GameObject>();
 

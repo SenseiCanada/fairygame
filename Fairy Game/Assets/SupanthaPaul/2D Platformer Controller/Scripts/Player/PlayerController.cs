@@ -41,7 +41,7 @@ namespace SupanthaPaul
 
 		private Rigidbody2D m_rb;
 		private ParticleSystem m_dustParticle;
-		private bool m_facingRight = true;
+		public bool m_facingRight = true; //made public for Escher Stair
 		private readonly float m_groundedRememberTime = 0.25f;
 		private float m_groundedRemember = 0f;
 		private int m_extraJumps;
