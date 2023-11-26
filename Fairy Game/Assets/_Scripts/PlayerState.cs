@@ -6,7 +6,7 @@ public class PlayerState : MonoBehaviour
 {
     [SerializeField]
     private string currentStateName;
-    private IPlayerState currentState;
+    //private IPlayerState currentState;
 
     //public DefaultState defaultState = new DefaultState();
 
@@ -18,7 +18,7 @@ public class PlayerState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentState = currentState.DoState(this);
-        currentStateName = currentState.ToString();
+        //currentState = currentState.DoState(this);
+        //currentStateName = currentState.ToString();
     }
 }

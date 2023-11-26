@@ -6,7 +6,8 @@ namespace SupanthaPaul
 	{
 		[SerializeField] private float speed;
 		[Header("Jumping")]
-		[SerializeField] private float jumpForce;
+        //[SerializeField] public bool canjump;
+        [SerializeField] private float jumpForce;
 		[SerializeField] private float fallMultiplier;
 		[SerializeField] private Transform groundCheck;
 		[SerializeField] private float groundCheckRadius;
@@ -14,6 +15,7 @@ namespace SupanthaPaul
 		[SerializeField] private int extraJumpCount = 1;
 		[SerializeField] private GameObject jumpEffect;
 		[Header("Dashing")]
+		[SerializeField] public bool canDash = false;
 		[SerializeField] private float dashSpeed = 30f;
 		[Tooltip("Amount of time (in seconds) the player will be in the dashing speed")]
 		[SerializeField] private float startDashTime = 0.1f;
@@ -79,7 +81,9 @@ namespace SupanthaPaul
 
 			m_rb = GetComponent<Rigidbody2D>();
 			m_dustParticle = GetComponentInChildren<ParticleSystem>();
-		}
+
+            //ConceptCollectionNotifier.OnConceptCollected += ConceptAddedToInventory;
+        }
 
 		private void FixedUpdate()
 		{
@@ -127,24 +131,26 @@ namespace SupanthaPaul
 					Flip();
 
 				// Dashing logic
-				if (isDashing)
-				{
-					if (m_dashTime <= 0f)
-					{
-						isDashing = false;
-						m_dashCooldown = dashCooldown;
-						m_dashTime = startDashTime;
-						m_rb.velocity = Vector2.zero;
-					}
-					else
-					{
-						m_dashTime -= Time.deltaTime;
-						if(m_facingRight)
-							m_rb.velocity = Vector2.right * dashSpeed;
-						else
-							m_rb.velocity = Vector2.left * dashSpeed;
-					}
-				}
+				
+                    if (isDashing)
+                    {
+                        if (m_dashTime <= 0f)
+                        {
+                            isDashing = false;
+                            m_dashCooldown = dashCooldown;
+                            m_dashTime = startDashTime;
+                            m_rb.velocity = Vector2.zero;
+                        }
+                        else
+                        {
+                            m_dashTime -= Time.deltaTime;
+                            if (m_facingRight)
+                                m_rb.velocity = Vector2.right * dashSpeed;
+                            else
+                                m_rb.velocity = Vector2.left * dashSpeed;
+                        }
+                    }
+                				
 
 				// wall grab
 				if(m_onWall && !isGrounded && m_rb.velocity.y <= 0f && m_playerSide == m_onWallSide)
@@ -281,5 +287,8 @@ namespace SupanthaPaul
 			Gizmos.DrawWireSphere((Vector2)transform.position + grabRightOffset, grabCheckRadius);
 			Gizmos.DrawWireSphere((Vector2)transform.position + grabLeftOffset, grabCheckRadius);
 		}
-	}
+
+		
+
+    }
 }
