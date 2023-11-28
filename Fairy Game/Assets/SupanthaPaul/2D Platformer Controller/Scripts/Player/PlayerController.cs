@@ -82,7 +82,7 @@ namespace SupanthaPaul
 			m_rb = GetComponent<Rigidbody2D>();
 			m_dustParticle = GetComponentInChildren<ParticleSystem>();
 
-            //ConceptCollectionNotifier.OnConceptCollected += ConceptAddedToInventory;
+            ConceptCollectionNotifier.OnConceptCollected += ConceptAddedToInventory;
         }
 
 		private void FixedUpdate()
@@ -288,7 +288,14 @@ namespace SupanthaPaul
 			Gizmos.DrawWireSphere((Vector2)transform.position + grabLeftOffset, grabCheckRadius);
 		}
 
-		
+		private void ConceptAddedToInventory(ConceptCollectionNotifier concept)
+		{
+			if (concept.conceptMechanic == "shrink")
+			{
+				gameObject.transform.localScale = gameObject.transform.localScale/1.75f;
+
+			}
+		}
 
     }
 }

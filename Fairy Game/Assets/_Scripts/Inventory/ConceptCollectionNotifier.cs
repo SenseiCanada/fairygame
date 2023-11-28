@@ -9,11 +9,15 @@ public class ConceptCollectionNotifier : MonoBehaviour
 {
     public GameObject conceptObject;
     public Sprite conceptIcon;
+    public bool isInInventory = false;
 
     public static event Action<ConceptCollectionNotifier> OnConceptCollected;
+    public static event Action<ConceptCollectionNotifier> OnConceptTraded;
+
 
     [SerializeField]
     public string conceptName;
+    public string conceptMechanic;
     public int slotTag;
 
 
@@ -25,8 +29,23 @@ public class ConceptCollectionNotifier : MonoBehaviour
             conceptObject = this.gameObject;
             //conceptObject.SetActive(false);
             OnConceptCollected(this);
+            this.isInInventory = true;
             
         }
     }
+
+    public void OnTradeButton1Click()
+    {
+        if (conceptObject.CompareTag("Slot1"))
+        {
+            conceptObject = this.gameObject;
+            OnConceptTraded(this);
+        }
+        
+    }
+
+
+
+    
 
 }

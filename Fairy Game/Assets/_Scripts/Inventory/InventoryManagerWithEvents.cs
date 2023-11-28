@@ -7,7 +7,6 @@ using UnityEngine;
 public class InventoryManagerWithEvents : MonoBehaviour
 {
     public List<GameObject> concepts = new List<GameObject>();
-    
 
     //public static event Action<ConceptCollectionNotifier> Slot1Filled;
 
@@ -15,7 +14,6 @@ public class InventoryManagerWithEvents : MonoBehaviour
     void Start()
     {
         ConceptCollectionNotifier.OnConceptCollected += ConceptAddedToInventory;
-
     }
 
 
@@ -71,6 +69,8 @@ public class InventoryManagerWithEvents : MonoBehaviour
 
 
     }
+       
+    
     private bool IsInSlot1()
     {
         foreach (GameObject concept in concepts)

@@ -391,10 +391,12 @@
 "Assets/_Scripts/Inventory/ConceptCollectionNotifier.cs"
 "Assets/_Scripts/Inventory/Concept_ChildLaughter.cs"
 "Assets/_Scripts/Inventory/Concept_Dash.cs"
+"Assets/_Scripts/Inventory/Concept_Shrink.cs"
 "Assets/_Scripts/Inventory/InventoryManager.cs"
 "Assets/_Scripts/Inventory/InventoryManagerWithEvents.cs"
-"Assets/_Scripts/Inventory/Slot1Displayer.cs"
+"Assets/_Scripts/Inventory/SlotsDisplayer.cs"
 "Assets/_Scripts/PlayerState.cs"
+"Assets/_Scripts/ShopManager.cs"
 "Assets/_Scripts/ShrinkTrigger.cs"
 "Assets/_Scripts/SizeResetter.cs"
 -langversion:9.0

@@ -11,6 +11,7 @@ public class Concept_Dash : ConceptCollectionNotifier
     void Start()
     {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        conceptMechanic = "dash";
         conceptName = "Unfounded Optimism";
     }
 

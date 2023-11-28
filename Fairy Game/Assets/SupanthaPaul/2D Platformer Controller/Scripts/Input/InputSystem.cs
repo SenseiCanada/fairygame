@@ -20,12 +20,12 @@ namespace SupanthaPaul
         }
         private void ConceptAddedToInventory(ConceptCollectionNotifier concept)
         {
-            if (concept.conceptName == "Unfounded Optimism")
+            if (concept.conceptMechanic == "dash")
             {
                 DashingIsAllowed = true;
 
             }
-            if (concept.conceptName == "Child's Laughter")
+            if (concept.conceptMechanic == "jump")
             {
                 JumpingIsAllowed = true;
             }

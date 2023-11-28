@@ -8,6 +8,7 @@ TagManager:
   - Slot1
   - Slot3
   - Slot4
+  - Slot2
   layers:
   - Default
   - TransparentFX

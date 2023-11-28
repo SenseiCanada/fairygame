@@ -13,6 +13,7 @@ public class Concept_ChildLaughter : ConceptCollectionNotifier
     void Start()
     {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        conceptMechanic = "jump";
         conceptName = "Child's Laughter";
     }
 
