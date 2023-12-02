@@ -13,6 +13,7 @@ public class ConceptCollectionNotifier : MonoBehaviour
 
     public static event Action<ConceptCollectionNotifier> OnConceptCollected;
     public static event Action<ConceptCollectionNotifier> OnConceptTraded;
+    public static event Action<ConceptCollectionNotifier> Trading;
 
 
     [SerializeField]
@@ -34,14 +35,15 @@ public class ConceptCollectionNotifier : MonoBehaviour
         }
     }
 
-    public void OnTradeButton1Click()
+public void ConceptBoughtFromShop()
     {
-        if (conceptObject.CompareTag("Slot1"))
+        if (OnConceptCollected != null)
         {
             conceptObject = this.gameObject;
-            OnConceptTraded(this);
+            //conceptObject.SetActive(false);
+            OnConceptCollected(this);
+            this.isInInventory = true;
         }
-        
     }
 
 

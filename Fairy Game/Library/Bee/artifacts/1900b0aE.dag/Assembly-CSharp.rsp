@@ -397,6 +397,7 @@
 "Assets/_Scripts/Inventory/SlotsDisplayer.cs"
 "Assets/_Scripts/PlayerState.cs"
 "Assets/_Scripts/ShopManager.cs"
+"Assets/_Scripts/ShopSlotsDisplayer.cs"
 "Assets/_Scripts/ShrinkTrigger.cs"
 "Assets/_Scripts/SizeResetter.cs"
 -langversion:9.0
